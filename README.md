@@ -48,10 +48,14 @@ Bu proje; modern, ölçeklenebilir ve yüksek performanslı bir **Çoklu Şirket
 -   [Docker Desktop](https://www.docker.com/products/docker-desktop/) (SQL Server için)
 
 ### 1. Veritabanı Kurulumu
-Sistem MS SQL Server kullanmaktadır. Docker üzerinden hızlıca ayağa kaldırabilirsiniz:
+Sistem MS SQL Server kullanmaktadır. En hızlı ve sorunsuz yöntem (hem macOS hem Windows için) **Docker** kullanmaktır:
+
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<Sifreniz123!>" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
 ```
+
+> [!TIP]
+> **Windows Kullanıcıları İçin:** Docker Desktop yüklüyse yukarıdaki komut Windows PowerShell veya CMD üzerinde de aynı şekilde çalışır. Eğer Docker kullanmak istemiyorsanız, yerel **SQL Server Express** kullanabilir ve `appsettings.json` içindeki `ConnectionStrings` kısmını kendi yerel sunucu adresinize göre güncelleyebilirsiniz.
 
 ### 2. Backend (API) Kurulumu
 1.  API klasörüne gidin:
