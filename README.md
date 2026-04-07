@@ -50,7 +50,7 @@ Bu proje; modern, ölçeklenebilir ve yüksek performanslı bir **Çoklu Şirket
 ### 1. Veritabanı Kurulumu
 Sistem MS SQL Server kullanmaktadır. Docker üzerinden hızlıca ayağa kaldırabilirsiniz:
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Db447996" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<Sifreniz123!>" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
 ### 2. Backend (API) Kurulumu
@@ -89,11 +89,3 @@ Bu proje, Yapay Zeka (Gemini 3 Flash) desteği ile "Mimari Denetçi" ve "Tasarı
 -   HTTP metod kısıtlamalarının (PUT/DELETE yasağı) uygulanması.
 -   Premium Glassmorphism arayüz bileşenlerinin tasarımı.
 -   EF Core performans analizleri ve LINQ sorgu optimizasyonları.
-
----
-
-## 🛡️ Lisans
-MIT Lisansı ile dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasına bakınız.
-
----
-**Durum:** Tamamlandı ve Yayına Hazır.
